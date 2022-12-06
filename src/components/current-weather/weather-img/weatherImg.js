@@ -1,3 +1,4 @@
+import React from 'react';
 import './weatherImg.css';
 import { useState,useEffect } from 'react';
 

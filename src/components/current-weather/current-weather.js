@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './current-weather.css';
 import './weather-img/weatherImg.js';
 
