@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+
+body{
+  background: gold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  max-width: 600px;
+  max-height: auto;
+  margin:auto;
+  padding: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Gaga{
+  background-image: linear-gradient(rgb(0, 0, 0) , rgb(11, 10, 87), rgb(59, 0, 114));
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sunrise{
+  background-image: linear-gradient(rgb(192, 56, 56) , rgb(238, 188, 80));
 }
 
-.App-link {
-  color: #61dafb;
+.day{
+  background-image: linear-gradient(rgb(34, 143, 233) , rgb(245, 221, 145));
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sunset{
+    background-image: linear-gradient(rgb(160, 56, 192) , rgb(238, 188, 80));
 }
+
+.night{
+  background-image: linear-gradient(rgb(0, 0, 0) , rgb(11, 10, 87), rgb(59, 0, 114));
+}
+

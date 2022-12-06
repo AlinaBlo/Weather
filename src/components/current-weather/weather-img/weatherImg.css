@@ -1,0 +1,407 @@
+
+/*SUN*/
+
+.sun{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: rgb(253, 255, 116);
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px;
+    transition: 1s;
+    animation: sunrise;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sunrise{
+    0% {right: -1000px}
+    100% {right: -80px}
+}
+
+.sun:hover{
+    height: 160px;
+    width: 160px;
+}
+
+/*moon*/
+.moon{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px;
+    transition: 1s;
+    animation: moonsisr;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.616);
+}
+
+@keyframes moonsisr{
+    0% {right: -1000px}
+    100% {right: -80px}
+}
+
+.moon:hover{
+    height: 160px;
+    width: 160px;
+}
+
+
+
+/*Cloude with sun attampt*/
+
+
+.WATa{
+    width: 200px;
+    height: 200px;
+    /* background: black; */
+}
+
+.centerd{
+    position:relative;
+    margin-top:-40px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*CLOUD*/
+
+.cloud{
+    margin-top: -50px;
+    margin-left: -30px;
+    position: relative;
+    width: 300px;
+    height: 100px;
+    border-radius: 50px;
+    background: rgb(255, 255, 255);
+    z-index: 9;
+
+    transition: 1s;
+    animation: cloud;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.cloud:hover{
+    height: 110px;
+    width: 310px;
+}
+
+.cloud::before{
+
+    content: '';
+    position: absolute;
+    top:-50px;
+    right:40px;
+    background: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+.cloud::after{
+    content: '';
+    position: absolute;
+    top:-75px;
+    left: 45px;
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 9;
+}
+
+@keyframes cloud{
+    0% {right: -1000px}
+    100% {right: 0px}
+}
+
+/*DARK CLOUD*/
+
+.Dark_cloud{
+    margin-top: 0px;
+    position: relative;
+    width: 300px;
+    height: 100px;
+    border-radius: 50px;
+    background: rgb(61, 61, 61);
+    animation: Dcloud 1.5s;
+    transition: 1s;
+    
+    
+}
+
+.Dark_cloud:hover{
+    height: 110px;
+    width: 310px;
+}
+
+.Dark_cloud::before{
+
+    content: '';
+    position: absolute;
+    top:-50px;
+    right:40px;
+    background: rgb(61, 61, 61);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+.Dark_cloud::after{
+    content: '';
+    position: absolute;
+    top:-75px;
+    left: 45px;
+    background: rgb(61, 61, 61);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+@keyframes Dcloud{
+    0% {right: -1000px}
+    100% {right: 0px}
+}
+
+:root{
+    --clr:rgb(238, 188, 80);
+    --rain:rgb(169, 207, 233);
+    --snow:rgb(250, 253, 255);;
+}
+
+/*TUNDER*/
+
+.Tunder
+{
+    display: flex;
+    animation: tundersMove 1.5s,tunders infinite;
+    animation-duration: 1s ; 
+    
+       
+}
+@keyframes tundersMove{
+    0% {left:1000px;}
+    100%{left:60px;}
+}
+@keyframes tunders{
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.Tunder .shape1{
+    position: relative;
+    width: 45px;
+    height: 90px;
+    right:-60px;
+    background: var(--clr);
+    transform: skew(-25deg) translate(-50%,-50%);
+    box-shadow: 10px 40px 45px 10px rgb(255, 248, 234);
+    animation: tundersMove 1.5s;
+    transition: 1s;
+}
+
+.Tunder .shape1::before{
+    content: ' ';
+    position: absolute;
+    bottom: -80px;
+    right:-30px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--clr);
+    border-right :50px solid transparent;
+}
+
+/*RAIN*/
+
+.rain{
+    
+    display: flex;
+    flex-direction: row-reverse;
+    content: ' ';
+    position: absolute;
+    left: 3px;
+    top: 220px;
+    width: 3px;
+    height: 6px;
+    color: ver(--rain);
+    box-sizing: border-box;
+    animation:Raincloud 1.5s, raining-cloude 0.5s linear infinite; 
+    transition: 1s;
+    
+}
+@keyframes Raincloud{
+    0% {left:1000px;}
+}
+@keyframes raining-cloude{
+    0% {
+        box-shadow:
+            20px -100px  var(--rain),
+            40px -120px  var(--rain),
+            60px -100px  var(--rain),
+            80px -120px  var(--rain),
+            100px -100px  var(--rain),
+            120px -120px  var(--rain),
+            140px -100px  var(--rain),
+            160px -120px  var(--rain),
+            180px -100px  var(--rain),
+            200px -120px  var(--rain);         
+    }
+    50%{
+        box-shadow:
+            20px -40px 0px -0px var(--rain),
+            40px -70px 0px -0px var(--rain),
+            60px -40px 0px -0px var(--rain),
+            80px -60px 0px -0px var(--rain),
+            100px -50px 0px -0px var(--rain),
+            120px -60px 0px -0px var(--rain),
+            140px -40px 0px -0px var(--rain),
+            160px -70px 0px -0px var(--rain),
+            180px -30px 0px -0px var(--rain),
+            200px -70px 0px -0px var(--rain);
+            
+    }
+
+    100%{
+        box-shadow:
+            20px -10px 0px -1px var(--rain),
+            40px -40px 0px -1px var(--rain),
+            60px -0px  0px -1px var(--rain),
+            80px -30px 0px -1px var(--rain),
+            100px -30px 0px -1px var(--rain),
+            120px -35px 0px -1px var(--rain),
+            140px -10px 0px -1px var(--rain),
+            160px -40px 0px -1px var(--rain),
+            180px -10px 0px -1px var(--rain),
+            200px -45px 0px -1px var(--rain);
+    }
+}
+
+/*SNOW*/
+
+.snow{
+    display: flex;
+    flex-direction: row-reverse;
+    content: ' ';
+    position: absolute;
+    left: 3px;
+    top: 200px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    color: ver(--rain);
+    box-sizing: border-box;
+    animation: Snowcloud 1.5s,snowing 1s linear infinite;
+    transition: 1s;
+}
+
+@keyframes Snowcloud{
+    0% {left:1000px;}
+}
+
+@keyframes snowing{
+    0% {
+        box-shadow:
+            20px -101px  var(--snow),
+            40px -130px  var(--snow),
+            60px -110px  var(--snow),
+            80px -122px  var(--snow),
+            100px -108px  var(--snow),
+            120px -124px  var(--snow),
+            140px -104px  var(--snow),
+            160px -126px  var(--snow),
+            180px -103px  var(--snow),
+            200px -117px  var(--snow);          
+    }
+    50%{
+        box-shadow:
+            20px -50px 0px -0px var(--snow),
+            40px -70px 0px -0px var(--snow),
+            60px -40px 0px -0px var(--snow),
+            80px -60px 0px -0px var(--snow),
+            100px -50px 0px -0px var(--snow),
+            120px -60px 0px -0px var(--snow),
+            140px -40px 0px -0px var(--snow),
+            160px -70px 0px -0px var(--snow),
+            180px -30px 0px -0px var(--snow),
+            200px -70px 0px -0px var(--snow);     
+    }
+
+    100%{
+        box-shadow:
+            20px -10px 0px -5px var(--snow),
+            40px -40px 0px -5px var(--snow),
+            60px -0px  0px -5px var(--snow),
+            80px -30px 0px -5px var(--snow),
+            100px -30px 0px -5px var(--snow),
+            120px -35px 0px -5px var(--snow),
+            140px -10px 0px -5px var(--snow),
+            160px -40px 0px -5px var(--snow),
+            180px -10px 0px -5px var(--snow),
+            200px -45px 0px -5px var(--snow);
+    }
+}
+
+/*MIST*/
+
+.mist{
+    display: flex;
+    flex-direction: row-reverse;
+    content: ' ';
+    position: absolute;
+    left: 3px;
+    top: -80px;
+    width: 180px;
+    height: 20px;
+    border-radius: 30%;
+    color: ver(--rain);
+    box-sizing: border-box;
+    animation:mistcloud 1.5s, misting 5s linear infinite;
+}
+
+@keyframes mistcloud{
+    0% {left:1000px;}
+}
+
+@keyframes misting{
+    0% {
+        box-shadow:
+            0px 50px 25px 5px var(--snow),
+            30px 90px 25px 5px var(--snow),
+            15px 130px 25px 5px var(--snow);         
+    }
+    50%{
+        box-shadow:
+            -10px 50px 10px 10px var(--snow),
+            40px 90px 10px 10px var(--snow),
+            5px 130px 10px 10px var(--snow);    
+    }
+    100%{
+        box-shadow:
+            0px 50px 25px 5px var(--snow),
+            30px 90px 25px 5px var(--snow),
+            15px 130px 25px 5px var(--snow);  
+
+    }
+}
