@@ -1,7 +1,7 @@
 {
-  "main.css": "/weather/static/css/main.cdbafbbc.chunk.css",
-  "main.js": "/weather/static/js/main.aba760dd.chunk.js",
-  "main.js.map": "/weather/static/js/main.aba760dd.chunk.js.map",
+  "main.css": "/weather/static/css/main.474177c4.chunk.css",
+  "main.js": "/weather/static/js/main.e98cbf80.chunk.js",
+  "main.js.map": "/weather/static/js/main.e98cbf80.chunk.js.map",
   "static/js/1.1743278c.chunk.js": "/weather/static/js/1.1743278c.chunk.js",
   "static/js/1.1743278c.chunk.js.map": "/weather/static/js/1.1743278c.chunk.js.map",
   "static/css/2.9eb0cc49.chunk.css": "/weather/static/css/2.9eb0cc49.chunk.css",
@@ -9,10 +9,10 @@
   "static/js/2.ea5c9e2d.chunk.js.map": "/weather/static/js/2.ea5c9e2d.chunk.js.map",
   "runtime~main.js": "/weather/static/js/runtime~main.a9b637ec.js",
   "runtime~main.js.map": "/weather/static/js/runtime~main.a9b637ec.js.map",
-  "static/media/semantic.min.css": "/weather/static/media/flags.9c74e172.png",
+  "static/media/semantic.min.css": "/weather/static/media/brand-icons.a1a749e8.svg",
+  "static/css/main.474177c4.chunk.css.map": "/weather/static/css/main.474177c4.chunk.css.map",
   "static/css/2.9eb0cc49.chunk.css.map": "/weather/static/css/2.9eb0cc49.chunk.css.map",
-  "static/css/main.cdbafbbc.chunk.css.map": "/weather/static/css/main.cdbafbbc.chunk.css.map",
   "index.html": "/weather/index.html",
-  "precache-manifest.42aecbe230b365db2bc6800b187c1a88.js": "/weather/precache-manifest.42aecbe230b365db2bc6800b187c1a88.js",
+  "precache-manifest.f11225d36cd76142932e7aed34dc7597.js": "/weather/precache-manifest.f11225d36cd76142932e7aed34dc7597.js",
   "service-worker.js": "/weather/service-worker.js"
 }
