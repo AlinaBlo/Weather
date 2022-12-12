@@ -14,11 +14,9 @@ function App() {
   const [forcast, setForcast] = useState(null);
 
   useEffect(() => {
-    console.log("Ahhh")
     const currentWeatherDefault = fetch(`${WEATHER_API_URL}/weather?q=tel-aviv&appid=${WEATHER_API_KEY}&units=metric`)
     Promise.all([currentWeatherDefault])
     .then(async (responses) => {
-      console.log("Ahhh2")
       const weatherResponses = await responses[0].json();
       setCurrentWeather({...weatherResponses})
     }).catch((err)=>console.log(err));
@@ -28,7 +26,7 @@ function App() {
   const handleOnSearchChange = (searchData) => {
     
     const [lat , lon] = searchData.value.split(" ")
-    console.log(lat , lon);//32.0809 34.7806
+    //console.log(lat , lon);//32.0809 34.7806
 
     const currentWeatherFetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
     const forcastFetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
@@ -69,35 +67,26 @@ function App() {
     var addTime = new Date(new Date("1970/01/01 " + time).getTime() + minsToAdd * 60000).toLocaleTimeString('en-UK', { hour: '2-digit', minute: '2-digit', hour12: false });
     var subTime = new Date(new Date("1970/01/01 " + time).getTime() + minsToSub * 60000).toLocaleTimeString('en-UK', { hour: '2-digit', minute: '2-digit', hour12: false });
 
-    console.log(subTime,newdate,addTime)
     if((addTime >= newdate) && (newdate >= subTime))
     {
-      console.log("sunrise")
       return 'sunrise'
     }
-    else{console.log(" no sunrise")}
-
-    console.log(subTime <= newdate,subTime,"<",newdate)
-    console.log(newdate <= addTime,newdate,"<",addTime)
-
 
     var time = sunset;
     var addTime = new Date(new Date("1970/01/01 " + time).getTime() + minsToAdd * 60000).toLocaleTimeString('en-UK', { hour: '2-digit', minute: '2-digit', hour12: false });
     var subTime = new Date(new Date("1970/01/01 " + time).getTime() + minsToSub * 60000).toLocaleTimeString('en-UK', { hour: '2-digit', minute: '2-digit', hour12: false });
-    console.log(subTime,newdate,addTime)
     //fix the length of the ifs and it will work
 
     if((addTime >= newdate) && (newdate >= subTime))
     {
-      console.log("sunset")
       return 'sunset'
     }
-    else{console.log(" no sunset")}
+
 
     if (sunrise <= newdate && newdate <= sunset)
-    {console.log("Day")
+    {
     return 'day'} 
-    else{console.log("Night")
+    else{
     return 'night'}
 
   }

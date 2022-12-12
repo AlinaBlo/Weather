@@ -405,3 +405,49 @@
 
     }
 }
+
+@media all and (max-width:500px){
+
+    .moon , .sun{
+        height: 120px;
+        width: 120px;
+    }
+
+    .moon:hover ,.sun:hover{
+        height: 130px;
+        width: 130px;
+    }
+    
+    .cloud , .Dark_cloud{
+        margin-top: -20px;
+        margin-left: 20px;
+        width: 200px;
+        height: 60px;
+        border-radius: 50px;
+
+    }
+    
+    .cloud:hover,.Dark_cloud:hover{
+        height: 70px;
+        width: 210px;
+    }
+    
+    .cloud::before,.Dark_cloud::before{
+        top:-30px;
+        right:30px;
+        width: 60px;
+        height: 60px;
+    
+    }
+    .cloud::after,.Dark_cloud::after{
+        top:-50px;
+        left: 34px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .snow{
+        top:130px
+    }
+
+}

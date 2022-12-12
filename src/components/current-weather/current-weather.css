@@ -61,7 +61,6 @@
     -5px -5px 30px rgba(255, 255, 255, 0.274);
     transition: 1s;
     font-family: 'Lucida Sans';
-
 }
 
 /* .weather_a:hover{
@@ -115,3 +114,31 @@
 .city-time{
     margin-left: 10px;
 }
+
+
+@media all and (max-width:500px){
+    .animation_cont{
+        display: flex;
+        align-items: center;
+    }
+
+    .weather_a{
+        padding: 23px;
+    }
+
+    .city{
+        font-size: 20px;
+    }
+
+    .top{
+        font-size: 15px;
+    }
+    .temperature{
+        font-size: 15px;
+    }
+    .details{
+        font-size: 15px;
+    }
+
+    
+  }

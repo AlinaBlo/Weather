@@ -9,9 +9,7 @@ export default function Weatherimg({data}){
     useEffect(() => {
         async function selectTheDiv() {
             const tmp=data.weather[0].icon
-            console.log(data.weather[0].icon);
 
-            
             if ( tmp === "01d")
                 {setWeather(()=>{return(<div><div className='sun' style={{top: -50,left:120 }}></div></div>)});}
             else if(tmp === "01n")
@@ -37,7 +35,7 @@ export default function Weatherimg({data}){
             else if(tmp === "50n" || tmp === "50d")
                 {setWeather(()=>{return(<div><div className='mist' style={{left:50,top:-110 }}></div></div>)});}
             else
-            {setWeather(()=>{return(<div><div className='mist'></div> </div>)});}
+                {setWeather(()=>{return(<div><div className='mist'></div> </div>)});}
             
         }
         selectTheDiv()
